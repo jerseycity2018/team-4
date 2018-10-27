@@ -1,4 +1,6 @@
 import React, {Component} from 'react'; 
+import Card from '@material-ui/core/Card';
+import IconButton from '@material-ui/core/IconButton';
 import './Photo.css';
 
 class Photo extends Component {
@@ -14,10 +16,14 @@ class Photo extends Component {
             photoId
         } = this.props
         return(
-            <div class="feed-photo">
-                <h3>{badge}</h3>
+            <Card className="photo-card">
+                <div class="feed-photo">
+                <h3 style={{textAlign : "center"}}>{badge}</h3>
                 <input class="feed-photo-img" type="image" name="myImage" src={url} ></input>
-            </div>
+                <IconButton></IconButton>
+                </div>
+            </Card>
+            
         )
     }
 }
