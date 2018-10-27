@@ -1,5 +1,5 @@
 import React, {Component} from 'react'; 
-
+import './Photo.css';
 
 class Photo extends Component {
     constructor(props){
@@ -16,7 +16,9 @@ class Photo extends Component {
         return(
             <div>
                 <h3>{badge}</h3>
-                <img src={url}></img>
+                {/* <img class='feed-Photo' src={url}></img>
+                <button class='feed-Photo-button'>Like</button> */}
+                <input class="feed-Photo" type="image" name="myImage" src={url} ></input>
             </div>
         )
     }
