@@ -1,6 +1,5 @@
-import Header from './Header/Header';
-import Photo from './Photo/Photo'; 
-import Menu from './Menu/Menu';
+import NavBar from './NavBar/NavBar';
+import Photo from './Photo/Photo';
 import Brand from './Brand/Brand'
 
-export { Header, Menu, Brand, Photo}
+export { NavBar, Brand, Photo}

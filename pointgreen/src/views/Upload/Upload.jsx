@@ -1,5 +1,9 @@
 import React, {Component} from 'react'; 
 import './Upload.css';
+import Input from '@material-ui/core/Input';
+import Button from '@material-ui/core/Button';
+
+
 
 class Upload extends Component {
     render(){
@@ -7,9 +11,9 @@ class Upload extends Component {
             <div class="upload-form">
                 <h3>Upload a Photo </h3>
                 <form>
-                    <input type="text" value="Badge Type"/><br/>
-                    <input type="text" value="Img URL "/><br/>
-                    <input type="submit" value="Submit"/>
+                    <Input type="text" placeholder="Badge Type"/><br/>
+                    <Input type="url" placeholder="Img URL"/><br/>
+                    <Button>Submit</Button>
                 </form>
             </div>    
         )
