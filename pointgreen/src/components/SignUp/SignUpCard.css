@@ -1,0 +1,10 @@
+.signUpCard {
+    background: rgba(255, 255, 255, 0.3);
+    width: 30%;
+    text-align: center;
+    padding: 5%;
+}
+
+.welcome-back-text {
+    padding: 20px;
+}
