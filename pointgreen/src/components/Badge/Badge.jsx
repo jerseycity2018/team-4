@@ -17,7 +17,7 @@ class Badge extends PureComponent {
     } = this.props;
 
     const style = {
-      filter: earned === required ? 'grayscale(0%)' : 'grayscale(100%)'
+      filter: (earned === required || !required)? 'grayscale(0%)' : 'grayscale(100%)'
     };
 
     let badgeText = "";

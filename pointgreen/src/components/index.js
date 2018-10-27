@@ -4,7 +4,8 @@ import Brand from './Brand/Brand';
 import Badge from './Badge/Badge';
 import Collection from './Collection/Collection';
 import LeafIcon from './LeafIcon/LeafIcon';
+import MultiBadgeContainer from './MultiBadgeContainer/MultiBadgeContainer';
 
 export {
-  NavBar, Brand, Photo, Badge, Collection, LeafIcon
+  NavBar, Brand, Photo, Badge, Collection, LeafIcon, MultiBadgeContainer
 };

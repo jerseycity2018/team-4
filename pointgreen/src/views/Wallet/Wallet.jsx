@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Collection } from '../../components';
+import { Collection, MultiBadgeContainer } from '../../components';
 
 class Wallet extends Component{
   render(){
@@ -32,7 +32,7 @@ class Wallet extends Component{
         <Collection puzzle={puzzles[1]} badges={badges[1]}/>
         <Collection puzzle={puzzles[2]} badges={badges[2]}/>
         <h2>Completed badges</h2>
-        <h2>Redeemed puzzles</h2>
+        <MultiBadgeContainer />
       </div>
     )
   }
