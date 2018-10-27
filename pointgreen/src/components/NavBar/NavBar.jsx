@@ -102,9 +102,13 @@ class NavBar extends PureComponent {
       </div>
     );
 
+    let divStyle = {
+      height: "64px",
+    }
+
     return (
-      <div>
-        <AppBar className="NavBar" position="static">
+      <div style={divStyle}>
+        <AppBar className="NavBar" position="fixed">
           <Toolbar className="container">
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={this.toggleDrawer('left', true)}>
               <MenuIcon />
