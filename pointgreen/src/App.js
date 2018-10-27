@@ -7,11 +7,9 @@ import './App.css';
 
 
 class App extends PureComponent {
-
   render() {
     const signedIn = true;
     return (
-
       <Router>
         <div style={{ height: '100%' }}>
           <NavBar/>
