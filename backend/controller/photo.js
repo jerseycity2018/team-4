@@ -25,6 +25,7 @@ exports.uploadPhoto = (req, res) => {
         photo.findById(photoID, (err, photo) => {
             if(err) res.status(500).json({error: 'Unable to find User with that id'});     
             if(!photo) res.status(404).json({error: 'Could not find that user'}); 
+            if(photo.voters == null) photo.voters = new Array();
             if(photo.voters.indexOf(userID)>-1) res.status(500).json({error: 'User already voted'}); 
             photo.voters = photo.voters.push(userID);    
             photo.save(error => {    
