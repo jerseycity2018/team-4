@@ -14,14 +14,6 @@ let puzzleSchema = new Schema({
   }]
 });
 
-puzzleSchema.pre('save', function (next) {
-  let currentDate = new Date().getTime();
-  this.updatedAt = currentDate;
-  if (!this.created_at) {
-    this.createdAt = currentDate;
-  }
-  next();
-});
 
 
 var puzzle = mongoose.model('puzzles', puzzleSchema);

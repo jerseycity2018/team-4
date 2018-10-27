@@ -17,24 +17,12 @@ let photoSchema = new Schema({
     required: true,
     unique: true
   },
-  numVotes: {
-    type: Number,
-    required: false
-  },
   voters: [{
-    type: userSchema,
+    type: String,
     required: false
   }]
 });
 
-photoSchema.pre('save', function (next) {
-  let currentDate = new Date().getTime();
-  this.updatedAt = currentDate;
-  if (!this.created_at) {
-    this.createdAt = currentDate;
-  }
-  next();
-});
 
 
 var photo = mongoose.model('photo', photoSchema);

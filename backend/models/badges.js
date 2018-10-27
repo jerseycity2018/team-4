@@ -14,14 +14,6 @@ let badgeSchema = new Schema({
   }
 });
 
-badgeSchema.pre('save', function (next) {
-  let currentDate = new Date().getTime();
-  this.updatedAt = currentDate;
-  if (!this.created_at) {
-    this.createdAt = currentDate;
-  }
-  next();
-});
 
 
 var badge = mongoose.model('badge', badgeSchema);
