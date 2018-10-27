@@ -1,23 +1,34 @@
 const photo = require('../models/photos');
+const Badges = require('../models/badges');
+
 // const User = require('../models/photos');
 
 exports.uploadPhoto = (req, res) => {
-    const { URL, userID, badgeID} = req.body;
-    console.log(req.body);
-    let photoData = {
-        URL,
-        userID,
-        badgeID,
-        voters: []
-    }
-    let newPhoto = new photo(photoData);
+    const { URL, userID, badgeName} = req.body;
+    console.log(req.body);  
+    Badges.find({ name: badgeName }, function (err, badge) {
+        if(err) {
+            console.log(err)
+        }
+        console.log(badge)
+        var badgeID = badge[0]._id;
+        let photoData = {
+            URL,
+            userID,
+            badgeID,
+            voters: []
+        }
+        console.log(photoData);
+        let newPhoto = new photo(photoData);
+    
+        newPhoto.save((err, photo) => {
+            if(err){
+                res.send(err);
+            }    
+            res.json(photo);
+        });
+    })              
 
-    newPhoto.save((err, photo) => {
-        if(err){
-            res.send(err);
-        }    
-        res.json(photo);
-    });
 }
 
     exports.votePhoto = (req, res) => {
@@ -37,5 +48,6 @@ exports.uploadPhoto = (req, res) => {
             
             });
         
-          });
-        };
+          };
+        });
+    }

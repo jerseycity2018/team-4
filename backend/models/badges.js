@@ -14,6 +14,13 @@ let badgeSchema = new Schema({
   }
 });
 
+badgeSchema.pre('save', function (next) {
+  console.log("Saving");
+  this.name = this.name.toLowerCase();
+  next();
+});
+
+
 
 
 var badge = mongoose.model('badge', badgeSchema);

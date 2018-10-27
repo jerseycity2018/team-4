@@ -10,12 +10,11 @@ let photoSchema = new Schema({
   userID: {
     type: String,
     required: true,
-    unique: true
+    unique: false
   },
   badgeID: {
     type: String,
     required: true,
-    unique: true
   },
   voters: [{
     type: String,
