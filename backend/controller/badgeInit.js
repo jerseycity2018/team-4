@@ -1,8 +1,8 @@
-const puzzle = require('badge');
+const badge = require('badge');
 
-exports.puzzle = (req, res) => {
+exports.badge = (req, res) => {
     const {name, imgURL} = req.body;
-    let newBadge = new puzzle(name,imgURL);
+    let newBadge = new badge(name,imgURL);
 
     return newBadge;
 }
