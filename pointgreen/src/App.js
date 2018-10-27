@@ -1,30 +1,28 @@
 import React, { PureComponent } from 'react';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { Feed, Impact, Signin, Signout, Wallet, Puzzles} from './views';
 import logo from './logo.svg';
 import './App.css';
 
+
 class App extends PureComponent {
+
   render() {
+    const signedIn = true; 
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit
-            {' '}
-            <code>src/App.js</code>
-            {' '}
-and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div style={{ height: '100%' }}>
+          <Route exact path="/" component={Signin} />
+          <Route path="/signin" component={Signin} />
+          <Route path="/signout" render={Signout} />
+            <div>
+              <Route path="/home" component={Feed} />}
+              <Route path="/impact" component={Impact} />
+              <Route path="/wallet" component={Wallet} />
+              <Route path="/puzzle" component={Puzzles} />
+              </div>
+        </div>
+      </Router>
     );
   }
 }
