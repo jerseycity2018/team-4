@@ -18,7 +18,7 @@ class App extends PureComponent {
           <Route path="/signin" component={Signin} />
           <Route path="/signout" render={Signout} />
             <div>
-              <Route path="/home" component={Feed} />
+              <Route path="/feed" component={Feed} />
               <Route path="/impact" component={Impact} />
               <Route path="/wallet" component={Wallet} />
               <Route path="/puzzle" component={Puzzles} />

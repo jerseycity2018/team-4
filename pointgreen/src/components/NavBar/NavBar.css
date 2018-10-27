@@ -2,3 +2,7 @@
     background-color: white !important;
     color: #767676 !important;
 }
+
+.no-underline {
+  text-decoration: none !important;
+}
