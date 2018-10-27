@@ -1,0 +1,15 @@
+.Menu {
+    background-color: white;
+    max-width: 280px;
+    box-shadow: 0 0 16px rgba(0,0,0,.28);
+    height: 100%;
+}
+
+.menu-bg {
+    height: 100vh;
+    background-color: rgba(0,0,0,.28);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
