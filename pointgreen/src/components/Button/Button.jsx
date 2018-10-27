@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
+import './button.css';
 
 class Button extends PureComponent {
     render(){
         return(
-            <button>Hello World</button>
+            <button class="button-register">Submit</button>
         )
     }
 }
