@@ -6,10 +6,18 @@ import Typography from "@material-ui/core/Typography";
 import Input from '@material-ui/core/Input';
 
 
+
 class SignUp extends PureComponent {
     render() {
+        var cardStyle = {
+            display: 'block',
+            width: '30vw',
+            transitionDuration: '0.3s',
+            height: '25vw',
+            backgroundColor: 'rgba(255, 255, 255, 0.6)',
+        }
         return(
-            <Card>
+            <Card style={cardStyle}>
             <CardContent class="signUpCard">
                 <Typography class ="welcome-back-text" variant="h5" component="h2">Welcome Back!</Typography>
                 <form>
