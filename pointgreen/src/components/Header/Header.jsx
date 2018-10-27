@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Brand } from '..';
 import './Header.css';
 
 class Header extends PureComponent {
@@ -7,7 +8,7 @@ class Header extends PureComponent {
             <nav class="Header">
                 <div class="container">
                     <i class="material-icons">menu</i>
-                    <span>PointGreen</span>
+                    <Brand/>
                 </div>
             </nav>
         )
