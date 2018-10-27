@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -67,22 +68,30 @@ class NavBar extends PureComponent {
         </List>
         <Divider />
         <List>
-          <ListItem button key='Feed'>
-            <ListItemIcon><Collections/></ListItemIcon>
-            <ListItemText primary='Feed'/>
-          </ListItem>
-          <ListItem button key='Wallet'>
-            <ListItemIcon><CardGiftcard/></ListItemIcon>
-            <ListItemText primary='Wallet'/>
-          </ListItem>
-          <ListItem button key='Impact'>
-            <ListItemIcon><InsertChart/></ListItemIcon>
-            <ListItemText primary='Impact'/>
-          </ListItem>
-          <ListItem button key='More Puzzles'>
-            <ListItemIcon><Gradient/></ListItemIcon>
-            <ListItemText primary='More Puzzles'/>
-          </ListItem>
+          <Link to="/feed" class='no-underline'>
+            <ListItem button key='Feed'>
+              <ListItemIcon><Collections/></ListItemIcon>
+              <ListItemText primary='Feed'/>
+            </ListItem>
+          </Link>
+          <Link to="/wallet" class='no-underline'>
+            <ListItem button key='Wallet'>
+              <ListItemIcon><CardGiftcard/></ListItemIcon>
+              <ListItemText primary='Wallet'/>
+            </ListItem>
+          </Link>
+          <Link to="/impact" class='no-underline'>
+            <ListItem button key='Impact'>
+              <ListItemIcon><InsertChart/></ListItemIcon>
+              <ListItemText primary='Impact'/>
+            </ListItem>
+          </Link>
+          <Link to="/puzzle" class='no-underline'>
+            <ListItem button key='More Puzzles'>
+              <ListItemIcon><Gradient/></ListItemIcon>
+              <ListItemText primary='More Puzzles'/>
+            </ListItem>
+          </Link>
           <ListItem button key='Settings'>
             <ListItemIcon><Settings/></ListItemIcon>
             <ListItemText primary='Settings'/>
