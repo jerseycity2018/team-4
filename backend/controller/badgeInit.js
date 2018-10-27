@@ -1,10 +1,10 @@
 const badge = require('../models/badges');
 
 exports.badge = (req, res) => {
-    const {name, imgURL} = req.body;
+    const {name, imgUrl} = req.body;
     let badgeData = {
         name,
-        imgURL
+        imgUrl
     }
     let newBadge = new badge(badgeData);
     newBadge.save((err, badge) => {
