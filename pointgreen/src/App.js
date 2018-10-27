@@ -16,7 +16,7 @@ class App extends PureComponent {
         <div style={{ height: '100%' }}>
           <NavBar/>
           <Route exact path="/" component={Feed} />
-          <Route exact path="/" component={Signin} />
+          {/* <Route exact path="/" component={Signin} /> */}
           <Route path="/signin" component={Signin} />
           <Route path="/signout" render={Signout} />
             <div>
