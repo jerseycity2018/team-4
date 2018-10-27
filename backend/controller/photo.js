@@ -1,4 +1,4 @@
-const Photo = require('../models/photos');
+const photo = require('../models/photos');
 // const User = require('../models/photos');
 
 exports.uploadPhoto = (req, res) => {
@@ -10,7 +10,7 @@ exports.uploadPhoto = (req, res) => {
         badgeID,
         voters: []
     }
-    let newPhoto = new Photo(photoData);
+    let newPhoto = new photo(photoData);
 
     newPhoto.save((err, photo) => {
         if(err){
@@ -21,24 +21,19 @@ exports.uploadPhoto = (req, res) => {
 }
 
     exports.votePhoto = (req, res) => {
-        console.log(req.params);
         const {photoID, userID} = req.params;
-        Photo.findById(photoID, (err, photo) => {
-            if(err) res.status(500).json({error: 'Unable to find photo with that id'}); 
-            else{    
-                console.log(photo);
-                console.log(photoID);
-                console.log(userID);
-                if(photo.voters.includes(userID)) res.status(500).json({error: 'User already voted'}); 
-                photo.voters=photo.voters.push(userID);    
-                console.log(photo.voters);
-                photo.save(error => {    
-                if (error) res.status(500).json({error: 'internal server error while voting'});
-            
-                res.status(200).json({message: 'Successfuly voted'});
-            
+        photo.findById(photoID, (err, photo) => {
+            if(err) res.status(500).json({error: 'Unable to find User with that id'});     
+            if(!photo) res.status(404).json({error: 'Could not find that user'}); 
+            if(photo.voters == null) photo.voters = new Array();
+            if(photo.voters.indexOf(userID)>-1) res.status(500).json({error: 'User already voted'}); 
+            photo.voters = photo.voters.push(userID);    
+            photo.save(error => {    
+              if (error) res.status(500).json({error: 'internal server error while voting'});
+        
+              res.status(200).json({message: 'Successfuly voted'});
+        
             });
-        }
         
           });
         };
