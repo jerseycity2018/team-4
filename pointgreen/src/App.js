@@ -11,10 +11,12 @@ class App extends PureComponent {
   render() {
     const signedIn = true;
     return (
+      
       <Router>
         <div style={{ height: '100%' }}>
           <Header/>
           <Menu/>
+          <Route exact path="/" component={Feed} />
           <Route exact path="/" component={Signin} />
           <Route path="/signin" component={Signin} />
           <Route path="/signout" render={Signout} />
