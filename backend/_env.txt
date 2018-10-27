@@ -1,2 +1,0 @@
-DB_URL=mongodb://admin:pointgreen2018@ds143573.mlab.com:43573/pointgreen
-secret=pointgreensecret
