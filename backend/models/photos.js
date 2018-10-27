@@ -7,7 +7,7 @@ let photoSchema = new Schema({
     required: true,
     unique: true
   },
-  uploader: {
+  userID: {
     type: String,
     required: true,
     unique: true
