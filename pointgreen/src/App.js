@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+
 import { Feed, Impact, Signin, Signout, Wallet, Puzzles, Upload, Business} from './views';
 import { NavBar } from './components';
 import logo from './logo.svg';
@@ -10,7 +11,6 @@ class App extends PureComponent {
   render() {
     const signedIn = true;
     return (
-
       <Router>
         <div style={{ height: '100%' }}>
           <NavBar />
