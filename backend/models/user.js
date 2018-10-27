@@ -19,10 +19,6 @@ let userSchema = new Schema({
   updatedAt: {
     type: Number,
     required: false
-  },
-  currentClip: {
-    type: String,
-    required: false
   }
 });
 

@@ -7,7 +7,6 @@ try {
 	var express = require("express");
 	var cors = require("cors");
 	var bodyParser = require("body-parser");
-	require("clipboardy");
 	require("bcryptjs");
 	var mongoose = require("mongoose");
 	require("dotenv").config();
