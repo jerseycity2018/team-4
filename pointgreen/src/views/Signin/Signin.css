@@ -1,0 +1,13 @@
+.sign-in-view {
+    display: flex;
+    background-color: red;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://fpspack.com.au/wp-content/uploads/2018/07/environment-post-2.jpg);
+    background-size: cover;
+}
+
+body {
+    overflow: hidden;
+}

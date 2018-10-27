@@ -1,3 +1,4 @@
+import SignUp from './SignUp/SignUp';
 import NavBar from './NavBar/NavBar';
 import Photo from './Photo/Photo';
 import Brand from './Brand/Brand';
@@ -7,5 +8,5 @@ import LeafIcon from './LeafIcon/LeafIcon';
 import MultiBadgeContainer from './MultiBadgeContainer/MultiBadgeContainer';
 
 export {
-  NavBar, Brand, Photo, Badge, Collection, LeafIcon, MultiBadgeContainer
+  NavBar, Brand, Photo, Badge, Collection, LeafIcon, MultiBadgeContainer, SignUp,
 };
