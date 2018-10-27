@@ -3,6 +3,12 @@
     color: #767676 !important;
 }
 
+.NavBar .container {
+  max-width: 1200px;
+  width: 1200px;
+  padding: 0;
+}
+
 .no-underline {
   text-decoration: none !important;
 }
