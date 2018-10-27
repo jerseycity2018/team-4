@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Collection, MultiBadgeContainer } from '../../components';
+import './Wallet.css'
 
 class Wallet extends Component{
   render(){
