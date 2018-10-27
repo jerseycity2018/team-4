@@ -8,7 +8,7 @@ import './App.css';
 class App extends PureComponent {
 
   render() {
-    const signedIn = true; 
+    const signedIn = true;
     return (
       <Router>
         <div style={{ height: '100%' }}>
@@ -16,7 +16,7 @@ class App extends PureComponent {
           <Route path="/signin" component={Signin} />
           <Route path="/signout" render={Signout} />
             <div>
-              <Route path="/home" component={Feed} />}
+              <Route path="/home" component={Feed} />
               <Route path="/impact" component={Impact} />
               <Route path="/wallet" component={Wallet} />
               <Route path="/puzzle" component={Puzzles} />
