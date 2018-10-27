@@ -1,10 +1,12 @@
 const photo = require('../models/photos');
 
-exports.puzzle = (req, res) => {
-    const { badgeIDs} = req.body;
+exports.uploadPhoto = (req, res) => {
+    const { urlLink, userID, badgeID} = req.body;
     let puzzleData = {
-        businessId : "1234",
-        badgeIDs
+        urlLink,
+        userID,
+        badgeID,
+        voters: []
     }
     let newPuzzle = new puzzle(puzzleData);
 
