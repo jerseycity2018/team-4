@@ -8,5 +8,5 @@ import LeafIcon from './LeafIcon/LeafIcon';
 import MultiBadgeContainer from './MultiBadgeContainer/MultiBadgeContainer';
 
 export {
-  NavBar, Brand, Photo, Badge, Collection, LeafIcon, MultiBadgeContainer
+  NavBar, Brand, Photo, Badge, Collection, LeafIcon, MultiBadgeContainer, SignUp,
 };
