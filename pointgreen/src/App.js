@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import { Feed, Impact, Signin, Signout, Wallet, Puzzles} from './views';
 import logo from './logo.svg';
 import './App.css';
-
+import {Button} from './components';
 
 class App extends PureComponent {
 
@@ -12,6 +12,8 @@ class App extends PureComponent {
     return (
       <Router>
         <div style={{ height: '100%' }}>
+        <Button/>
+
           <Route exact path="/" component={Signin} />
           <Route path="/signin" component={Signin} />
           <Route path="/signout" render={Signout} />
