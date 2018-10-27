@@ -1,4 +1,3 @@
-
 console.log("Starting Server");
 const apiRouter = require("./routes/api");
 

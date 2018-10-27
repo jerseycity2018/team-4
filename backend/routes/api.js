@@ -10,6 +10,7 @@ const auth = require('../controller/auth');
 router.get('/', apiHome.getApi);
 router.post('/', apiHome.postApi);
 
-
+router.post('/auth/signup', auth.register);
+router.post('/auth/login', auth.login);
 
 module.exports = router;
