@@ -1,5 +1,9 @@
 .Brand {
-    color: #767676;
+    color: #005CB9;
     font-family: "Arvo";
     font-size: 2rem;
+}
+
+.Brand span {
+  color: #008242;
 }
