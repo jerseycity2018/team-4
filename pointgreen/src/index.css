@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Arvo');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 body {
@@ -25,5 +25,5 @@ code {
 }
 
 h1, h2 {
-    font-family: "Indie Flower";
+    font-family: "Arvo";
 }
