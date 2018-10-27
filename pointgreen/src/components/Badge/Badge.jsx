@@ -13,13 +13,11 @@ class Badge extends PureComponent {
       earned,
       required,
       type,
-      bgColor,
       desc
     } = this.props;
 
     const style = {
-      filter: earned === required ? 'grayscale(0%)' : 'grayscale(100%)',
-      backgroundColor: bgColor,
+      filter: earned === required ? 'grayscale(0%)' : 'grayscale(100%)'
     };
 
     let badgeText = "";

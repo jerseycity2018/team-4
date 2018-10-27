@@ -4,16 +4,16 @@ import { Collection } from '../../components';
 class Wallet extends Component{
   render(){
     let badges = [[
-      {type: "compost", bgColor: "#0BC6DC", desc: "Composted leftovers from a meal", earned: 5, required: 5},
-      {type: "recycle", bgColor: "#0BC6DC", desc: "Recycled a bottle or can", earned: 8, required: 8},
-      {type: "vegetarian", bgColor: "#0BC6DC", desc: "Ate a vegetarian meal", earned: 12, required: 12},
+      {type: "compost", desc: "Composted leftovers from a meal", earned: 5, required: 5},
+      {type: "recycle", desc: "Recycled a bottle or can", earned: 8, required: 8},
+      {type: "vegetarian", desc: "Ate a vegetarian meal", earned: 12, required: 12},
     ], [
-      {type: "compost", bgColor: "#0BC6DC", desc: "Composted leftovers from a meal", earned: 5, required: 10},
-      {type: "publicTransit", bgColor: "#0BC6DC", desc: "Took public transportation", earned: 8, required: 8},
-      {type: "windTurbine", bgColor: "#0BC6DC", desc: "Installed a wind turbine", earned: 0, required: 1},
+      {type: "compost", desc: "Composted leftovers from a meal", earned: 5, required: 10},
+      {type: "publicTransit", desc: "Took public transportation", earned: 8, required: 8},
+      {type: "windTurbine", desc: "Installed a wind turbine", earned: 0, required: 1},
     ], [
-      {type: "publicTransit", bgColor: "#0BC6DC", desc: "Took public transportation", earned: 8, required: 10},
-      {type: "windTurbine", bgColor: "#0BC6DC", desc: "Installed a wind turbine", earned: 0, required: 1},
+      {type: "publicTransit", desc: "Took public transportation", earned: 8, required: 10},
+      {type: "windTurbine", desc: "Installed a wind turbine", earned: 0, required: 1},
     ]];
 
     let puzzles = [{

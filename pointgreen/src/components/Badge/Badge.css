@@ -9,6 +9,7 @@
   padding: 1rem;
   border-radius: 50%;
   box-sizing: border-box;
+  background-color: #0BC6DC;
 }
 
 .Badge > .badgeProgress {
