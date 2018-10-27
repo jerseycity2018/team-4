@@ -110,7 +110,7 @@ class NavBar extends PureComponent {
             <Typography variant="h6" color="inherit" className={classes.grow}>
               <Brand/>
             </Typography>
-            <Button color="inherit">Add Photo</Button>
+            <Button component={Link} to="/upload" color="inherit">Add Photo</Button>
           </Toolbar>
         </AppBar>
         <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
