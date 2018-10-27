@@ -15,6 +15,11 @@
   text-align: center;
   border-left: 1px solid rgba(0, 0, 0, 0.12);
   padding-left: 16px;
+  width: 100px;
+}
+
+.Collection .puzzleInfo > img {
+  width: 100%;
 }
 
 .Collection .puzzleText {
