@@ -23,7 +23,9 @@ class Collection extends PureComponent {
 
     let myButton;
     if (!puzzle.hideButton) {
-      if (puzzle.progress === 100)
+      if (puzzle.canStart) {
+        myButton = <Button variant="contained" className="redeemButton">Start</Button>;
+      } else if (puzzle.progress === 100)
         myButton = <Button variant="contained" className="redeemButton">Redeem</Button>;
       else
         myButton = <Button variant="contained" disabled>{puzzle.progress}%</Button>;
