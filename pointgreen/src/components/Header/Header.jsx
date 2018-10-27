@@ -1,9 +1,16 @@
 import React, { PureComponent } from 'react';
+import { Brand } from '..';
+import './Header.css';
 
 class Header extends PureComponent {
     render(){
         return(
-            <button>Hello World</button>
+            <nav class="Header">
+                <div class="container">
+                    <i class="material-icons">menu</i>
+                    <Brand/>
+                </div>
+            </nav>
         )
     }
 }
