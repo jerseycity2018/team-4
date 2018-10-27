@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let photoSchema = new Schema({
-  linkToStorage: {
+  URL: {
     type: String,
     required: true,
     unique: true
