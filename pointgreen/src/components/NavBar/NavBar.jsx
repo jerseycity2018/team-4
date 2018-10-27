@@ -63,7 +63,9 @@ class NavBar extends PureComponent {
       <div className={classes.list}>
         <List>
           <ListItem>
+            <Link to="/" class='no-underline'>
             <Brand />
+            </Link>
           </ListItem>
         </List>
         <Divider />
@@ -108,7 +110,9 @@ class NavBar extends PureComponent {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" color="inherit" className={classes.grow}>
-              <Brand/>
+              <Link to="/" class='no-underline'>
+                <Brand />
+              </Link>
             </Typography>
             <Button component={Link} to="/upload" color="inherit">Add Photo</Button>
           </Toolbar>

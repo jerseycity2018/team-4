@@ -30,6 +30,7 @@ class Photo extends Component {
                 <h3 style={{textAlign : "center"}}>{badge}</h3>
                 <input onClick={this.onClick} class="feed-photo-img" type="image" name="myImage" src={url} ></input>
                 <LeafIcon></LeafIcon>
+                <span>{this.state.likeCount}</span>
                 </div>
             </Card>
             
