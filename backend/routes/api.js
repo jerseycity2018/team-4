@@ -16,9 +16,7 @@ router.post('/', apiHome.postApi);
 router.post('/create/puzzle', puzzleInit.puzzle);
 router.post('/create/badge', badgeInit.badge);
 
-
-
-
-
+router.post('/auth/signup', auth.register);
+router.post('/auth/login', auth.login);
 
 module.exports = router;

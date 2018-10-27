@@ -3,10 +3,11 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
 exports.register = (req, res) => {
-  const {email, password} = req.body;
+  const {email, password, userName} = req.body;
   let userData = {
     email,
-    password: bcrypt.hashSync(password, 5)
+    password: bcrypt.hashSync(password, 5),
+    userName
   };
 
   let newUser = new User(userData);
@@ -17,6 +18,7 @@ exports.register = (req, res) => {
       });
       return res.status(201).json({message: 'signup successful', token});
     } else {
+      console.log("ERror thronw" + error)
       if (error.code ===  11000) { // this error gets thrown only if similar user record already exist.
         return res.status(409).send('user already exist!');
         } else {
