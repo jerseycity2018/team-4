@@ -20,7 +20,7 @@ router.post('/create/badge', badgeInit.badge);
 router.post('/photo/upload', auth.verifyToken, photo.uploadPhoto);
 
 router.post('/photo/vote/photoID=:photoID/', auth.verifyToken, photo.votePhoto);
-router.post('/feed', auth.verifyToken, feed.getFeed );
+router.get('/feed', auth.verifyToken, feed.getFeed );
 
 
 
