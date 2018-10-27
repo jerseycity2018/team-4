@@ -4,5 +4,6 @@ import Signin from './Signin/Signin';
 import Signout from './Signout/Signout'; 
 import Wallet from './Wallet/Wallet'; 
 import Puzzles from './Puzzles/Puzzles'; 
+import Upload from './Upload/Upload';
 
-export { Feed, Impact, Signin, Signout, Wallet, Puzzles};
+export { Feed, Impact, Signin, Signout, Wallet, Puzzles, Upload};

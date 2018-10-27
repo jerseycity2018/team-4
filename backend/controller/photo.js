@@ -1,4 +1,4 @@
-const Photo = require('../models/photos');
+const photo = require('../models/photos');
 // const User = require('../models/photos');
 
 exports.uploadPhoto = (req, res) => {
@@ -10,7 +10,7 @@ exports.uploadPhoto = (req, res) => {
         badgeID,
         voters: []
     }
-    let newPhoto = new Photo(photoData);
+    let newPhoto = new photo(photoData);
 
     newPhoto.save((err, photo) => {
         if(err){
@@ -36,7 +36,6 @@ exports.uploadPhoto = (req, res) => {
                 res.status(200).json({message: 'Successfuly voted'});
             
             });
-        }
         
           });
         };

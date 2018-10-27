@@ -17,7 +17,7 @@ router.post('/', apiHome.postApi);
 router.post('/create/puzzle', puzzleInit.puzzle);
 router.post('/create/badge', badgeInit.badge);
 router.post('/photo/upload', auth.verifyToken, photo.uploadPhoto);
-router.post('/photo/vote/photoID=:photoID/', auth.verifyToken, photo.votePhoto);
+router.post('/photo/vote', auth.verifyToken, photo.votePhoto);
 
 
 router.post('/auth/signup', auth.register);

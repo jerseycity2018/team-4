@@ -16,8 +16,6 @@ class Photo extends Component {
         return(
             <div class="feed-photo">
                 <h3>{badge}</h3>
-                {/* <img class='feed-Photo' src={url}></img>
-                <button class='feed-Photo-button'>Like</button> */}
                 <input class="feed-photo-img" type="image" name="myImage" src={url} ></input>
             </div>
         )
