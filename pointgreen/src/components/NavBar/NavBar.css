@@ -2,13 +2,3 @@
     background-color: white !important;
     color: #767676 !important;
 }
-
-.NavBar i {
-    padding: 12px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.NavBar i:hover {
-    background-color: rgba(0,0,0,0.071);
-}
