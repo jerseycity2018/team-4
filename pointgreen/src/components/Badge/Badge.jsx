@@ -10,17 +10,30 @@ class Badge extends PureComponent {
 
   render() {
     const {
-      redeemed,
+      earned,
+      required,
       type,
+      desc
     } = this.props;
+
     const style = {
-      filter: !redeemed ? 'grayscale(100%)' : 'grayscale(0%)',
-      width: '40px',
-      height: '40px',
+      filter: (earned === required || !required)? 'grayscale(0%)' : 'grayscale(100%)'
     };
+
+    let badgeText = "";
+
+    if (required) {
+      badgeText = earned + "/" + required;
+    } else {
+      badgeText = earned;
+    }
+
     return (
-      <div className="badgeCircle">
-        <img style={style} alt="icon" src={`/badges/${type}.svg`} />
+      <div className="Badge" title={desc}>
+        <div style={style} className="badgeIcon">
+          <img alt="icon" src={`/badges/${type}.svg`} />
+        </div>
+        <div className="badgeProgress">{badgeText}</div>
       </div>
     );
   }

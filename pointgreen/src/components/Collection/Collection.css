@@ -1,0 +1,41 @@
+.Collection > * {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.Collection .badgeList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Collection .puzzleInfo {
+  text-align: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+  padding-left: 16px;
+}
+
+.Collection .puzzleText {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.Collection p, .Collection h3 {
+  margin: 0;
+}
+
+.Collection p {
+  font-size: .875rem;
+  font-style: italic;
+}
+
+.Collection .redeemButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.Collection .redeemButton:hover {
+  background-color: #087f23;
+}

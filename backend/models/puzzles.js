@@ -7,11 +7,11 @@ let puzzleSchema = new Schema({
     required: false,
     unique: true
   },
-  badgeIDs: [{
+    badgeIDs: {
     type: String,
     required: true,
     unique: true
-  }]
+    }
 });
 
 

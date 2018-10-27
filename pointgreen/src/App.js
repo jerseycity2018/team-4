@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import { Feed, Impact, Signin, Signout, Wallet, Puzzles, Upload} from './views';
-import { NavBar, SignUp } from './components';
+
+import { Feed, Impact, Signin, Signout, Wallet, Puzzles, Upload, Business} from './views';
+import { NavBar } from './components';
 import logo from './logo.svg';
 import './App.css';
 
@@ -23,6 +24,7 @@ class App extends PureComponent {
               <Route path="/wallet" component={Wallet} />
               <Route path="/puzzle" component={Puzzles} />
               <Route path="/upload" component={Upload} />
+              <Route path="/business" component={Business}/>
               </div>
         </div>
       </Router>
