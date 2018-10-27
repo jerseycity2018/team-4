@@ -8,15 +8,8 @@ import Button from '@material-ui/core/Button';
 
 class SignUp extends PureComponent {
     render() {
-        var cardStyle = {
-            display: 'block',
-            width: '30vw',
-            transitionDuration: '0.3s',
-            height: '25vw',
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        }
         return(
-            <Card style={cardStyle}>
+            <Card className="card-style">
             <CardContent class="signUpCard">
                 <Typography class ="welcome-back-text" variant="h3" component="h1">Welcome Back!</Typography>
                 <form>
