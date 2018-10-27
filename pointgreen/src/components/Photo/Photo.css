@@ -1,4 +1,7 @@
-.feed-Photo {
+.feed-photo{
+    text-align: center; 
+}
+.feed-photo-img {
     max-width: 612px;
     max-height: 614px; 
 }

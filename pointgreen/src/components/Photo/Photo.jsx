@@ -14,11 +14,11 @@ class Photo extends Component {
             photoId
         } = this.props
         return(
-            <div>
+            <div class="feed-photo">
                 <h3>{badge}</h3>
                 {/* <img class='feed-Photo' src={url}></img>
                 <button class='feed-Photo-button'>Like</button> */}
-                <input class="feed-Photo" type="image" name="myImage" src={url} ></input>
+                <input class="feed-photo-img" type="image" name="myImage" src={url} ></input>
             </div>
         )
     }
