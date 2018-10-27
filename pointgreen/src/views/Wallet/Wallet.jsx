@@ -19,9 +19,9 @@ class Wallet extends Component{
     let puzzles = [{
       imgUrl: "/puzzles/logo-rare.png", reward: "Free t-shirt", company: "rare", progress: 100
     }, {
-      imgUrl: "/puzzles/logo-rare.png", reward: "Free coffee", company: "Starbucks", progress: 40
+      imgUrl: "https://illuminatisymbols.info/wp-content/uploads/illuminati-symbols-Starbucks-Coffee-Logo.gif", reward: "Free coffee", company: "Starbucks", progress: 40
     }, {
-      imgUrl: "/puzzles/logo-rare.png", reward: "Internship", company: "JPMorgan", progress: 0
+      imgUrl: "https://banner2.kisspng.com/20180424/uww/kisspng-chase-bank-jpmorgan-chase-car-finance-loan-chase-5adf8d0d931767.1989114615246000776025.jpg", reward: "Internship", company: "JPMorgan", progress: 0
     }];
 
     return(
