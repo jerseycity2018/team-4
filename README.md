@@ -1,6 +1,6 @@
-Team 4
+Team 4 (pointGreen)
 
-NGO:
+NGO: Rare
 
 Members: 
 Shahzoda,
