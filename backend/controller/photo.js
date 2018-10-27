@@ -10,7 +10,6 @@ exports.uploadPhoto = (req, res) => {
         if(err) {
             console.log(err)
         }
-        console.log(badge)
         var badgeID = badge[0]._id;
         let photoData = {
             URL,
