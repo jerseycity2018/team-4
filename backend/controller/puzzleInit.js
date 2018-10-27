@@ -1,8 +1,12 @@
-const puzzle = require('puzzle');
+const puzzle = require('../models/puzzles');
 
 exports.puzzle = (req, res) => {
-    const badgeIDs = req.body;
-    let newPuzzle = new puzzle("",badgeIDs);
+    const { badgeIDs} = req.body;
+    let puzzleData = {
+        businessId : "1234",
+        badgeIDs
+    }
+    let newPuzzle = new puzzle(puzzleData);
 
     newPuzzle.save((err, puzzle) => {
         if(err){
@@ -10,5 +14,4 @@ exports.puzzle = (req, res) => {
         }    
         res.json(puzzle);
     });
-    return newPuzzle;
 }

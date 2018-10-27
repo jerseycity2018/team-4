@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 let puzzleSchema = new Schema({
   businessID: {
     type: String,
-    required: true,
+    required: false,
     unique: true
   },
   badgeIDs: [{

@@ -13,8 +13,10 @@ router.get('/', apiHome.getApi);
 router.post('/', apiHome.postApi);
 
 //Badges and Puzzles Creation
-router.post('/create/puzzle', puzzleInit);
-router.post('/create/badge', badgeInit);
+router.post('/create/puzzle', puzzleInit.puzzle);
+router.post('/create/badge', badgeInit.badge);
+
+
 
 
 
