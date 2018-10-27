@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { Collection, MultiBadgeContainer } from '../../components';
-//import './Wallet.css'
+import { Collection, MultiBadgeContainer, StatsCard } from '../../components';
+import './Stats.css'
 
 class Stats extends Component{
   render(){
@@ -22,7 +22,13 @@ class Stats extends Component{
 
     return(
       <div className="Wallet container">
-        <h1>Stats</h1>
+        <h1>Lifetime Stats</h1>
+        <h2>Overview</h2>
+        <div className="cardContainer">
+          <StatsCard num="84" title="Lifetime Leaves"/>
+          <StatsCard num="17" title="Lifetime Photos"/>
+          <StatsCard num="137" title="Lifetime Impressions"/>
+        </div>
         <h2>Completed puzzles</h2>
         <Collection puzzle={puzzles[0]} badges={badges[0]}/>
         <Collection puzzle={puzzles[1]} badges={badges[1]}/>

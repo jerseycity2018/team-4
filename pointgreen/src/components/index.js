@@ -6,7 +6,8 @@ import Badge from './Badge/Badge';
 import Collection from './Collection/Collection';
 import LeafIcon from './LeafIcon/LeafIcon';
 import MultiBadgeContainer from './MultiBadgeContainer/MultiBadgeContainer';
+import StatsCard from './StatsCard/StatsCard';
 
 export {
-  NavBar, Brand, Photo, Badge, Collection, LeafIcon, MultiBadgeContainer, SignUp,
+  NavBar, Brand, Photo, Badge, Collection, LeafIcon, MultiBadgeContainer, SignUp, StatsCard
 };

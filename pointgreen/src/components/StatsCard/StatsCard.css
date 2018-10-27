@@ -1,0 +1,16 @@
+.StatsCard {
+  width: calc(33% - 16px);
+  display: inline-block;
+  text-align: center;
+}
+
+.StatsCard > div {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.StatsCard h2 {
+  font-size: 5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
