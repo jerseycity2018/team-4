@@ -20,7 +20,7 @@ class App extends PureComponent {
           <Route path="/signout" render={Signout} />
             <div>
               <Route path="/feed" component={Feed} />
-              <Route path="/impact" component={Impact} />
+              <Route path="/stats" component={Impact} />
               <Route path="/wallet" component={Wallet} />
               <Route path="/puzzle" component={Puzzles} />
               <Route path="/upload" component={Upload} />
