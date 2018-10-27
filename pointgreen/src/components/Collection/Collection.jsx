@@ -15,17 +15,21 @@ const styles = theme => ({
 
 class Collection extends PureComponent {
   render(){
-    const { classes, badges, puzzle } = this.props;
+    const { classes, badges, puzzle} = this.props;
 
     const style = {
       filter: `grayscale(${100-puzzle.progress}%)`
     };
 
     let myButton;
-    if (puzzle.progress === 100)
-      myButton = <Button variant="contained" className="redeemButton">Redeem</Button>;
-    else
-      myButton = <Button variant="contained" disabled>{puzzle.progress}%</Button>;
+    if (!puzzle.hideButton) {
+      if (puzzle.canStart) {
+        myButton = <Button variant="contained" className="redeemButton">Start</Button>;
+      } else if (puzzle.progress === 100)
+        myButton = <Button variant="contained" className="redeemButton">Redeem</Button>;
+      else
+        myButton = <Button variant="contained" disabled>{puzzle.progress}%</Button>;
+    }
 
     return(
       <div class="Collection">

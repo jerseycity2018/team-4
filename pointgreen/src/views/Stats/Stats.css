@@ -1,0 +1,5 @@
+.cardContainer {
+  display: flex;
+  flex-wrap: row;
+  justify-content: space-between;
+}

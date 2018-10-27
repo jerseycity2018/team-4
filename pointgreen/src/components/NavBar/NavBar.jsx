@@ -82,10 +82,10 @@ class NavBar extends PureComponent {
               <ListItemText primary='Wallet'/>
             </ListItem>
           </Link>
-          <Link to="/impact" class='no-underline'>
-            <ListItem button key='Impact'>
+          <Link to="/stats" class='no-underline'>
+            <ListItem button key='Lifetime Stats'>
               <ListItemIcon><InsertChart/></ListItemIcon>
-              <ListItemText primary='Impact'/>
+              <ListItemText primary='Lifetime Stats'/>
             </ListItem>
           </Link>
           <Link to="/puzzle" class='no-underline'>
