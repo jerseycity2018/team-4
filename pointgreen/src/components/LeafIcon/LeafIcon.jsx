@@ -1,30 +1,46 @@
-import React, {Component} from 'react'; 
+import React, { Component } from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import { Icon } from '@material-ui/core';
+import axios from 'axios';
 
-class LeafIcon extends Component{
+class LeafIcon extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicked: false,
+    };
+  }
 
-    constructor(props)  {
-        super(props);
-        this.state = {
-            clicked : false 
-        }; 
-    }
-    onClick = () => {
-        this.setState({clicked : !(this.state.clicked)}); 
-        console.log(this.state.clicked);
-    }
+  onClick() {
+    const { voteUrl } = this.props;
+    this.setState({ clicked: !(this.state.clicked) });
+    console.log(this.state.clicked);
+    console.log(voteUrl);
+    const instance = axios.create({
+      baseURL: voteUrl,
+      timeout: 1000,
+      headers: { 'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViZDNjN2ExNzY5ODdmNjllNDU0NjRjNiIsImlhdCI6MTU0MDYwOTA2MiwiZXhwIjoxNTQwNjk1NDYyfQ.n9ZGz4hJHPnygyVCrFGk7FuzV3ttKKQxr08UWV7HUXY' },
+    });
+    instance.post('').then((response) => {
+      console.log(response);
+    })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
-    render(){
-        return(
-            <IconButton onClick={this.onClick}>
-                <svg style={{width:"24px", height:"24px"}} viewBox="0 0 24 24">
-            <path fill="#000000" d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
-                </svg>
-            </IconButton>
-            
-        )
-    }
+  render() {
+    const { voteUrl } = this.props;
+    const { clicked } = this.state;
+    return (
+      <IconButton onClick={() => this.onClick}>
+        <svg style={{ width: '24px', height: '24px', color: (clicked ? 'green' : null) }} viewBox="0 0 24 24">
+          <path fill={clicked ? 'green' : '#000000'} d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
+        </svg>
+      </IconButton>
+
+    );
+  }
 }
 
-export default LeafIcon; 
+export default LeafIcon;

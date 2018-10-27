@@ -1,9 +1,10 @@
 .feed-photo-img {
     max-width: 612px;
-    max-height: 614px; 
+    max-height: 614px;
 }
 
 .photo-card {
-    max-width: 612px; 
+    max-width: 612px;
+    margin-bottom: 20px;
 
 }
