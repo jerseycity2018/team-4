@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import { Feed, Impact, Signin, Signout, Wallet, Puzzles} from './views';
-import { NavBar, Menu, SignUp } from './components';
+import { Feed, Impact, Signin, Signout, Wallet, Puzzles, Upload} from './views';
+import { NavBar, SignUp } from './components';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,8 +12,9 @@ class App extends PureComponent {
     return (
       <Router>
         <div style={{ height: '100%' }}>
-          <NavBar/>
+          <NavBar />
           <Route exact path="/" component={Feed} />
+          {/* <Route exact path="/" component={Signin} /> */}
           <Route path="/signin" component={Signin} />
           <Route path="/signout" render={Signout} />
             <div>
@@ -21,7 +22,8 @@ class App extends PureComponent {
               <Route path="/impact" component={Impact} />
               <Route path="/wallet" component={Wallet} />
               <Route path="/puzzle" component={Puzzles} />
-            </div>
+              <Route path="/upload" component={Upload} />
+              </div>
         </div>
       </Router>
     );

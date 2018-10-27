@@ -7,6 +7,7 @@ const puzzleInit = require('../controller/puzzleInit');
 const badgeInit = require('../controller/badgeInit');
 const photo = require('../controller/photo');
 const auth = require('../controller/auth');
+const feed = require('../controller/feed');
 
 // API
 // Base API Route
@@ -17,7 +18,11 @@ router.post('/', apiHome.postApi);
 router.post('/create/puzzle', puzzleInit.puzzle);
 router.post('/create/badge', badgeInit.badge);
 router.post('/photo/upload', auth.verifyToken, photo.uploadPhoto);
+
 router.post('/photo/vote/photoID=:photoID/', auth.verifyToken, photo.votePhoto);
+router.post('/feed', auth.verifyToken, feed.getFeed );
+
+
 
 
 router.post('/auth/signup', auth.register);

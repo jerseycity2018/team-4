@@ -1,4 +1,4 @@
-const Photo = require('../models/photos');
+const photo = require('../models/photos');
 // const User = require('../models/photos');
 
 exports.uploadPhoto = (req, res) => {
@@ -10,7 +10,7 @@ exports.uploadPhoto = (req, res) => {
         badgeID,
         voters: []
     }
-    let newPhoto = new Photo(photoData);
+    let newPhoto = new photo(photoData);
 
     newPhoto.save((err, photo) => {
         if(err){
@@ -22,23 +22,20 @@ exports.uploadPhoto = (req, res) => {
 
     exports.votePhoto = (req, res) => {
         console.log(req.params);
-        const {photoID, userID} = req.params;
+        const {photoID} = req.params;
+        const {userID} = req.body;
         Photo.findById(photoID, (err, photo) => {
             if(err) res.status(500).json({error: 'Unable to find photo with that id'}); 
-            else{    
-                console.log(photo);
-                console.log(photoID);
-                console.log(userID);
-                if(photo.voters.includes(userID)) res.status(500).json({error: 'User already voted'}); 
-                photo.voters=photo.voters.push(userID);    
-                console.log(photo.voters);
+            else if(photo.voters.includes(userID)) res.status(500).json({error: 'User already voted'});
+            else{
+                photo.voters.push(userID);    
+                console.log(photo.voters.includes(userID));
                 photo.save(error => {    
                 if (error) res.status(500).json({error: 'internal server error while voting'});
             
                 res.status(200).json({message: 'Successfuly voted'});
             
             });
-        }
         
           });
         };
